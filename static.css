@@ -1,0 +1,146 @@
+/* font-family: 'Luckiest Guy', cursive;
+font-family: 'Raleway', sans-serif; */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+h1 {
+  font-size: 2rem;
+}
+
+body {
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(33, 33, 33, .9);
+    height:70px;
+    z-index:170;
+    margin:0 auto;
+    border-bottom:1px solid #dadada;
+    width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;  
+    padding: 1rem;
+}
+
+.header ul {
+	list-style: none;
+}
+
+header a {
+    color: #909090;
+}
+
+.logo {
+    width: 40%;
+    max-height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+
+/* Tiny reset thingy */
+body,html{margin:0;padding:0;}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+  
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+#hero {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */ 
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: #6b6b6b;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('img/jason-rosewell-ASKeuOZqhYU-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2::after {
+  background-image: url('img/contekennyhero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 60%;
+}
+
+footer {
+  background: #909090;
+  color: #fff;
+}
